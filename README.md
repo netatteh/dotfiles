@@ -16,9 +16,16 @@ cd $HOME
 git clone git@github.com:netatteh/dotfiles.git
 ```
 3. Run `stow <application_folder> --adopt` for all the configuration folders you wish to introduce to the new system
+```bash
+cd $HOME/dotfiles
+stow bash --adopt
+stow nvim --adopt
+```
 4. If any of the dotfiles already exist, stow will copy the existing files over to `$HOME/dotfiles` and git will show them as changes in working directory. If you want to keep the files in this repository, reset any changes with `git restore`.
 ```bash
 cd $HOME/dotfiles
+git status
+git diff
 git restore .
 ```
 
